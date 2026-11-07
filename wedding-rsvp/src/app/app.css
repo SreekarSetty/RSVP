@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --wine: #702b3b;
+  --wine-dark: #481d2b;
+  --gold: #c29a58;
+  --cream: #fffaf1;
+  --ink: #40312e;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.hero {
+  min-height: 670px;
+  padding: 75px 20px;
+  text-align: center;
+  color: white;
+  background:
+    radial-gradient(ellipse at 50% 0%, #a65e58, transparent 70%),
+    linear-gradient(145deg, #4a1d2a, #873c49 55%, #4a1d2a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ganesha {
+  color: #f3dcae;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero .eyebrow { color: #f4dcae; }
+
+h1, h2, h3, footer h2 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.hero h1 {
+  margin: 22px 0;
+  font-size: clamp(54px, 9vw, 88px);
+  line-height: .95;
+  font-weight: 500;
+}
+
+.hero h1 span { color: #f2d49c; }
+
+.flourish {
+  color: var(--gold);
+  font-size: 27px;
+  margin: 20px;
+}
+
+.invitation {
+  max-width: 500px;
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #f4dcae;
+  margin-bottom: 5px;
+}
+
+.place {
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  border: 1px solid #e4c48e;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.blessing {
+  padding: 45px 20px;
+  text-align: center;
+  background: #f5ebd9;
+  color: var(--wine);
+  line-height: 1.8;
+  font-size: 13px;
+}
+
+.deity { font-size: 25px; color: var(--gold); }
+
+.celebrations, .rsvp-section {
+  max-width: 1080px;
+  margin: auto;
+  padding: 80px 22px;
+  text-align: center;
+}
+
+.celebrations h2, .rsvp-section h2 {
+  color: var(--wine);
+  font-size: 46px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.section-intro {
+  color: #796b62;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.event-card {
+  padding: 35px 22px;
+  background: white;
+  border: 1px solid #eadbc4;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px #4b2b1b0a;
+}
+
+.event-icon { font-size: 36px; }
+
+.event-date {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.event-card h3 {
+  color: var(--wine);
+  font-size: 31px;
+  margin: 10px 0;
+}
+
+.event-card p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.venue { color: #88766a; }
+
+.rsvp-section {
+  max-width: 690px;
+  padding-top: 55px;
+}
+
+form {
+  padding: 35px;
+  background: white;
+  border: 1px solid #eadbc4;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 12px 35px #4b2b1b0c;
+}
+
+form > label {
+  display: block;
+  margin: 20px 0 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select, textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid #dfd3c5;
+  border-radius: 7px;
+  background: #fffdf9;
+  color: var(--ink);
+  font: inherit;
+}
+
+textarea { resize: vertical; }
+
+.radio-options, .event-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.radio-options label, .event-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 16px;
+  border: none;
+  border-radius: 7px;
+  background: var(--wine);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .55; cursor: not-allowed; }
+
+.status {
+  color: #28683c;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.status.error { color: #b42318; }
+
+footer {
+  padding: 45px 20px;
+  text-align: center;
+  background: var(--wine-dark);
+  color: white;
+}
+
+footer h2 { font-size: 36px; font-weight: 500; }
+footer p { font-size: 13px; line-height: 1.7; }
+.footer-date { color: #e6c58d; letter-spacing: 2px; font-size: 10px; }
+
+@media (max-width: 700px) {
+  .hero { min-height: 590px; padding: 60px 20px; }
+  .hero h1 { font-size: 58px; }
+  .event-grid { grid-template-columns: 1fr; }
+  .celebrations, .rsvp-section { padding: 55px 17px; }
+  .celebrations h2, .rsvp-section h2 { font-size: 37px; }
+  form { padding: 24px 18px; }
+  .radio-options { flex-direction: column; gap: 13px; }
+}
+
+.wedding-event-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fffaf1;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+.wedding-event-image img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+  }
