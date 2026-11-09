@@ -35,7 +35,7 @@ import { FormsModule } from '@angular/forms';
       <div class="event-grid">
         <article class="event-card">
         <div class="event-icon">
-        <img src="images/haldi-ghibli.jpg" alt="Our Haldi celebration" />
+        <img src="/images/haldi-ghibli.jpg" alt="Our Haldi celebration" />
       </div>
           <p class="event-date">FEBRUARY 19 · MORNING</p>
           <h3>Haldi</h3>
@@ -47,7 +47,7 @@ import { FormsModule } from '@angular/forms';
 
         <article class="event-card">
   <div class="event-icon">
-  <img src="images/PelliKodukuPelliKuthuruGibhili.jpeg" alt="Our Sangeeth celebration" />
+  <img src="/images/PelliKodukuPelliKuthuruGibhili.jpeg" alt="Our Sangeeth celebration" />
   </div>
 
   <p class="event-date">FEBRUARY 19 · AFTERNOON</p>
@@ -63,7 +63,7 @@ import { FormsModule } from '@angular/forms';
 
         <article class="event-card">
         <div class="event-icon">
-        <img src="images/sangeeth-ghibli.jpg" alt="Our Sangeeth celebration" />
+        <img src="/images/sangeeth-ghibli.jpg" alt="Our Sangeeth celebration" />
       </div>
           <p class="event-date">FEBRUARY 19 · EVENING</p>
           <h3>Sangeeth</h3>
@@ -76,7 +76,7 @@ import { FormsModule } from '@angular/forms';
         <article class="event-card">
         <div class="event-icon wedding-event-image">
   <img
-    src="images/marriage-ghibli.jpg"
+    src="/images/marriage-ghibli.jpg"
     alt="Our complete South Indian wedding ceremony"
   />
 </div>
