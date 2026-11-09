@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     </header>
 
     <section class="blessing">
-      <div class="deity">॥ श्री गणेशाय नमः ॥</div>
+      <div class="deity">॥ श्री गणेशाय नमः ॥  ॐ सद्गुरु ॥</div>
       <p>With the blessings of Lord Ganesha and Lord Venkateswara</p>
       <p>we invite you to be part of our special celebrations.</p>
     </section>
@@ -40,7 +40,9 @@ import { FormsModule } from '@angular/forms';
           <p class="event-date">FEBRUARY 19 · MORNING</p>
           <h3>Haldi</h3>
           <p>A morning of turmeric, blessings and joyful traditions.</p>
-          <p class="venue">Venue and exact time to be announced</p>
+          <a class="venue" href="https://www.google.com/maps?q=3712+Highland+Bayou+Dr,+Prosper,+TX+75078" target="_blank" rel="noopener noreferrer">
+  3712 Highland Bayou Dr, Prosper, TX 75078
+</a>
         </article>
 
         <article class="event-card">
@@ -48,13 +50,15 @@ import { FormsModule } from '@angular/forms';
   <img src="images/PelliKodukuPelliKuthuruGibhili.jpeg" alt="Our Sangeeth celebration" />
   </div>
 
-  <p class="event-date">DATE & TIME TO BE ANNOUNCED</p>
+  <p class="event-date">FEBRUARY 19 · AFTERNOON</p>
   <h3>Pellikoduku & Pellikuthuru</h3>
   <p>
     A beautiful Telugu pre-wedding tradition celebrating the bride
     and groom with blessings, family customs and joyful moments.
   </p>
-  <p class="venue">Venue and exact time to be announced</p>
+  <a class="venue" href="https://www.google.com/maps?q=3712+Highland+Bayou+Dr,+Prosper,+TX+75078" target="_blank" rel="noopener noreferrer">
+  3712 Highland Bayou Dr, Prosper, TX 75078
+</a>
 </article>
 
         <article class="event-card">
@@ -64,7 +68,9 @@ import { FormsModule } from '@angular/forms';
           <p class="event-date">FEBRUARY 19 · EVENING</p>
           <h3>Sangeeth</h3>
           <p>An evening of music, dance and celebration.</p>
-          <p class="venue">Meridian Venue, Allen, Texas</p>
+          <a class="venue" href="https://www.google.com/maps?q=351+Southwind+Ln,+Fairview,+TX+75069" target="_blank" rel="noopener noreferrer">
+  351 Southwind Ln, Fairview, TX 75069
+</a>
         </article>
 
         <article class="event-card">
@@ -77,7 +83,9 @@ import { FormsModule } from '@angular/forms';
           <p class="event-date">FEBRUARY 20 · MORNING</p>
           <h3>Wedding</h3>
           <p>Join us as we begin our beautiful journey together.</p>
-          <p class="venue">Meridian Venue, Allen, Texas</p>
+          <a class="venue" href="https://www.google.com/maps?q=351+Southwind+Ln,+Fairview,+TX+75069" target="_blank" rel="noopener noreferrer">
+  351 Southwind Ln, Fairview, TX 75069
+</a>
         </article>
       </div>
     </section>
