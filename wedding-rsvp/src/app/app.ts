@@ -66,7 +66,7 @@ import { FormsModule } from '@angular/forms';
         <img src="/images/sangeeth-ghibli.jpg" alt="Our Sangeeth celebration" />
       </div>
           <p class="event-date">FEBRUARY 19 · EVENING</p>
-          <h3>Sangeeth</h3>
+          <h3>Reception/Sangeeth</h3>
           <p>An evening of music, dance and celebration.</p>
           <a class="venue" href="https://www.google.com/maps?q=351+Southwind+Ln,+Fairview,+TX+75069" target="_blank" rel="noopener noreferrer">
   351 Southwind Ln, Fairview, TX 75069
@@ -171,7 +171,7 @@ import { FormsModule } from '@angular/forms';
 
     <footer>
       <div class="flourish">✦ ❀ ✦</div>
-      <h2>Sreekar & Indu Sree</h2>
+      <h2>Sreekar & Indusree</h2>
       <p>With love, we look forward to celebrating with you.</p>
       <p class="footer-date">FEBRUARY 19–20, 2027</p>
     </footer>
