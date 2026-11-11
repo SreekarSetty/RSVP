@@ -116,7 +116,7 @@ section {
 }
 
 /* =========================================
-   HERO SECTION
+   HERO SECTION - DESKTOP
 ========================================= */
 
 .hero-section {
@@ -346,8 +346,6 @@ section {
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(75, 43, 27, 0.12);
 }
-
-/* Event Images */
 
 .event-image {
   width: 100%;
@@ -881,27 +879,39 @@ section {
     letter-spacing: 0.3px;
   }
 
-  /* Hero Section */
+  /* Hero Section - MOBILE FIX */
 
   .hero-section {
+    width: 100%;
     min-height: 0;
     height: auto;
 
-    padding: 32px 12px 38px;
+    padding: 35px 12px 45px;
 
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    /* Show the complete background image width */
-    background-size: 100% auto;
-    background-position: center top;
+    background-color: var(--cream);
+    background-image: url('/images/backgroundImage.png');
+
+    /* Cover the entire hero section, including RSVP */
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+
+    overflow: hidden;
   }
 
   .hero-content {
     width: 100%;
     max-width: 100%;
-    padding: 10px 5px;
+    padding: 10px 5px 15px;
     margin: 0 auto;
+
+    text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   .ganesha {
@@ -1075,7 +1085,7 @@ section {
     font-size: 13px;
   }
 
-  /* RSVP */
+  /* RSVP Form */
 
   .rsvp-section {
     padding: 60px 17px;
@@ -1141,11 +1151,16 @@ section {
   }
 
   .hero-section {
-    padding: 28px 9px 34px;
+    min-height: 0;
+    height: auto;
+    padding: 28px 9px 38px;
+
+    background-size: cover;
+    background-position: center center;
   }
 
   .hero-content {
-    padding: 8px 3px;
+    padding: 8px 3px 12px;
   }
 
   .hero-section h1 {
