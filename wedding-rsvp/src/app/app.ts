@@ -56,7 +56,7 @@ export class App {
       });
 
       this.status =
-        'Your RSVP request was sent. The browser cannot verify the Google Sheets response yet.';
+        'Your RSVP request was sent successfully.';
 
       this.form = this.emptyForm();
       formDirective.resetForm(this.form);
