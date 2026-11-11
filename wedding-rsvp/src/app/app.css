@@ -885,21 +885,21 @@ section {
     width: 100%;
     min-height: 0;
     height: auto;
-
+  
     padding: 35px 12px 45px;
-
+  
     display: flex;
     align-items: center;
     justify-content: center;
-
+  
     background-color: var(--cream);
     background-image: url('/images/backgroundImage.png');
-
-    /* Cover the entire hero section, including RSVP */
-    background-size: cover;
+  
+    /* Show the entire image without cropping the sides */
+    background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
-
+  
     overflow: hidden;
   }
 
@@ -1154,8 +1154,8 @@ section {
     min-height: 0;
     height: auto;
     padding: 28px 9px 38px;
-
-    background-size: cover;
+  
+    background-size: 100% 100%;
     background-position: center center;
   }
 
