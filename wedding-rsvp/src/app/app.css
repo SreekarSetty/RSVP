@@ -38,7 +38,7 @@ body {
   background: var(--cream);
 }
 
-h1,
+
 h2,
 h3,
 footer h2 {
@@ -85,6 +85,7 @@ section {
 .brand {
   color: var(--wine);
   font-family: 'Cormorant Garamond', serif;
+  margin-left: -20px;
   font-size: 29px;
   font-weight: 600;
   text-decoration: none;
@@ -725,6 +726,7 @@ section {
 
   .header-inner {
     padding: 12px 18px;
+    margin-left: -20px;
   }
 
   .main-nav {
@@ -768,6 +770,7 @@ section {
 
   .brand {
     font-size: 27px;
+    margin-left: -20px !important;
   }
 
   .main-nav {
