@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 /* =========================================
    GLOBAL THEME
@@ -34,10 +34,9 @@ body {
 
 .wedding-page {
   width: 100%;
-  overflow: hidden;
+  overflow-x: clip;
   background: var(--cream);
 }
-
 
 h2,
 h3,
@@ -72,10 +71,12 @@ section {
 }
 
 .header-inner {
+  width: 100%;
   max-width: 1200px;
   min-height: 76px;
   margin: auto;
   padding: 12px 25px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,7 +86,6 @@ section {
 .brand {
   color: var(--wine);
   font-family: 'Cormorant Garamond', serif;
-  margin-left: -20px;
   font-size: 29px;
   font-weight: 600;
   text-decoration: none;
@@ -120,24 +120,41 @@ section {
 ========================================= */
 
 .hero-section {
+  width: 100%;
   min-height: 670px;
-  padding: 90px 20px;
-  text-align: center;
-  color: white;
-
-  background:
-    radial-gradient(ellipse at 50% 0%, #a65e58, transparent 70%),
-    linear-gradient(145deg, #4a1d2a, #873c49 55%, #4a1d2a);
+  height: auto;
+  padding: 65px 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  text-align: center;
+  color: var(--wine);
+
+  background-color: var(--cream);
+  background-image: url('/images/backgroundImage.png');
+  background-size: 100%;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
 }
 
 .hero-content {
   width: 100%;
   max-width: 850px;
   margin: auto;
+  padding: 15px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.ganesha {
+  color: var(--wine);
+  font-size: 42px;
+  line-height: 1.3;
+  margin-bottom: 12px;
 }
 
 .eyebrow {
@@ -150,68 +167,86 @@ section {
 }
 
 .hero-section .eyebrow {
-  color: #f4dcae;
+  color: var(--wine);
+  margin-bottom: 15px;
 }
 
 .hero-section h1 {
-  margin: 25px 0;
-  color: white;
-  font-size: clamp(54px, 9vw, 88px);
-  line-height: 1;
-  font-weight: 500;
+  max-width: 100%;
+  margin: 18px auto;
+
+  color: var(--wine);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 600;
+  line-height: 1.12;
+
+  overflow-wrap: break-word;
 }
 
 .hero-section h1 span {
-  color: #f2d49c;
+  display: block;
+  margin: 5px 0;
+  color: var(--wine);
 }
 
 .hero-subtitle {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 18px auto;
   font-size: 15px;
-  line-height: 1.9;
-  color: #fff8ed;
+  line-height: 1.8;
+  color: var(--wine);
 }
 
 .hero-divider {
   width: 90px;
   height: 1px;
-  margin: 30px auto;
-  background: #e4c48e;
+  margin: 22px auto;
+  background: var(--gold);
 }
 
 .hero-date {
   margin: 10px 0;
-  color: #f4dcae;
+  color: var(--wine);
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
+  line-height: 1.4;
   letter-spacing: 1px;
 }
 
 .hero-location {
   margin-top: 12px;
-  color: white;
+  color: var(--wine);
   font-size: 11px;
+  font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
+  line-height: 1.6;
 }
 
 .primary-button {
   display: inline-block;
-  margin-top: 30px;
-  padding: 15px 32px;
-  border: 1px solid #e4c48e;
-  border-radius: 4px;
+  margin: 22px auto 5px;
+  padding: 13px 32px;
+
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+
+  background: var(--wine);
   color: white;
+
   text-decoration: none;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 2px;
+  line-height: 1.5;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.25s ease;
 }
 
 .primary-button:hover {
-  background: #e4c48e;
+  background: var(--gold);
   color: var(--wine-dark);
 }
 
@@ -295,11 +330,16 @@ section {
 .event-card {
   min-width: 0;
   overflow: hidden;
+
   background: white;
   border: 1px solid #eadbc4;
   border-radius: 12px;
+
   box-shadow: 0 10px 30px rgba(75, 43, 27, 0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .event-card:hover {
@@ -307,16 +347,18 @@ section {
   box-shadow: 0 15px 35px rgba(75, 43, 27, 0.12);
 }
 
-/* Event Images - show the complete image without cropping */
+/* Event Images */
 
 .event-image {
   width: 100%;
   height: auto;
   min-height: 0;
   overflow: hidden;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   background: #fffaf1;
 }
 
@@ -325,17 +367,17 @@ section {
   width: 100%;
   height: auto;
   max-height: none;
+
   object-fit: contain;
   object-position: center;
+
   transition: none;
 }
 
-/* Keep the complete image visible when hovering */
 .event-card:hover .event-image img {
   transform: none;
 }
 
-/* Wedding image - retain its original proportions */
 .event-image.wedding-event-image {
   height: auto;
   min-height: 0;
@@ -403,11 +445,14 @@ section {
   display: inline-block;
   margin-top: 5px;
   padding-bottom: 5px;
+
   color: var(--wine);
   border-bottom: 1px solid var(--gold);
+
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+
   transition: color 0.2s ease;
 }
 
@@ -433,27 +478,34 @@ section {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+
   max-width: 1050px;
   margin: 40px auto 0;
 }
 
 .hotel-card {
+  min-width: 0;
   padding: 35px 22px;
+
   background: white;
   border: 1px solid #eadbc4;
   border-radius: 12px;
+
   box-shadow: 0 5px 18px rgba(70, 35, 25, 0.07);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Style for the hotel-icon image */
 .hotel-icon {
-  max-width: 100%; /* Ensures the image doesn't exceed the container's width */
-  height: auto; /* Maintains the aspect ratio */
-  display: block; /* Removes inline spacing */
-  margin: 0 auto; /* Centers the image horizontally */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hotel-card:hover {
@@ -461,17 +513,12 @@ section {
   box-shadow: 0 10px 24px rgba(70, 35, 25, 0.12);
 }
 
-.hotel-icon {
-  margin-bottom: 12px;
-  color: var(--gold);
-  font-size: 36px;
-}
-
 .hotel-card h3 {
   margin: 8px 0 14px;
   color: var(--wine);
   font-size: 25px;
   font-weight: 500;
+  line-height: 1.3;
 }
 
 .hotel-address {
@@ -484,11 +531,14 @@ section {
 .hotel-card a {
   display: inline-block;
   padding-bottom: 5px;
+
   color: var(--wine);
   border-bottom: 1px solid var(--gold);
+
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+
   transition: color 0.2s ease;
 }
 
@@ -509,6 +559,7 @@ section {
 ========================================= */
 
 .rsvp-section {
+  width: 100%;
   max-width: 760px;
   margin: auto;
   padding: 85px 22px;
@@ -516,10 +567,13 @@ section {
 }
 
 .rsvp-form {
+  width: 100%;
   padding: 38px;
+
   background: white;
   border: 1px solid #eadbc4;
   border-radius: 14px;
+
   text-align: left;
   box-shadow: 0 12px 35px rgba(75, 43, 27, 0.06);
 }
@@ -542,14 +596,20 @@ section {
   width: 100%;
   min-height: 46px;
   padding: 12px 14px;
+
   border: 1px solid #dfd3c5;
   border-radius: 7px;
   outline: none;
+
   background: #fffdf9;
   color: var(--ink);
+
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .form-group input:focus,
@@ -583,8 +643,10 @@ section {
   display: flex;
   align-items: center;
   gap: 9px;
+
   color: var(--ink);
   font-size: 13px;
+
   cursor: pointer;
 }
 
@@ -607,14 +669,17 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
+
   color: var(--ink);
   font-size: 13px;
+
   cursor: pointer;
 }
 
 .checkbox-option input {
   width: 16px;
   height: 16px;
+  flex: 0 0 auto;
   accent-color: var(--wine);
 }
 
@@ -632,8 +697,10 @@ section {
 .rsvp-status {
   margin-top: 18px;
   padding: 13px;
+
   border-radius: 7px;
   text-align: center;
+
   font-size: 13px;
   line-height: 1.7;
 }
@@ -654,16 +721,23 @@ section {
   width: 100%;
   margin-top: 15px;
   padding: 16px;
+
   border: none;
   border-radius: 7px;
+
   background: var(--wine);
   color: white;
+
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
+
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .submit-button:hover:not(:disabled) {
@@ -697,9 +771,11 @@ section {
 .footer-names {
   margin: 0 0 12px;
   color: #f4dcae;
+
   font-family: 'Cormorant Garamond', serif;
   font-size: 38px;
   font-weight: 500;
+  line-height: 1.3;
 }
 
 .site-footer p {
@@ -726,7 +802,12 @@ section {
 
   .header-inner {
     padding: 12px 18px;
-    margin-left: -20px;
+    gap: 18px;
+  }
+
+  .brand {
+    font-size: 25px;
+    white-space: normal;
   }
 
   .main-nav {
@@ -748,6 +829,16 @@ section {
   .hotel-card {
     padding: 28px 16px;
   }
+
+  .hero-section {
+    min-height: 620px;
+    padding: 55px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(40px, 6vw, 58px);
+    line-height: 1.15;
+  }
 }
 
 /* =========================================
@@ -755,6 +846,8 @@ section {
 ========================================= */
 
 @media (max-width: 700px) {
+
+  /* Header */
 
   .site-header {
     position: relative;
@@ -766,46 +859,129 @@ section {
     justify-content: center;
     gap: 12px;
     padding: 15px 12px;
+    margin: 0 auto;
   }
 
   .brand {
-    font-size: 27px;
-    margin-left: -20px !important;
+    margin: 0;
+    font-size: clamp(19px, 5vw, 25px);
+    text-align: center;
+    white-space: normal;
   }
 
   .main-nav {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px 18px;
+    gap: 10px 16px;
   }
 
   .main-nav a {
-    font-size: 11px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
   }
 
-  /* Hero */
+  /* Hero Section */
 
   .hero-section {
-    min-height: 590px;
-    padding: 65px 18px;
+    min-height: 0;
+    height: auto;
+
+    padding: 32px 12px 38px;
+
+    align-items: flex-start;
+
+    /* Show the complete background image width */
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 5px;
+    margin: 0 auto;
+  }
+
+  .ganesha {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .hero-section .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  /* Wedding Names */
 
   .hero-section h1 {
-    font-size: clamp(48px, 12vw, 65px);
+    width: 100%;
+    max-width: 100%;
+
+    margin: 15px auto;
+    padding: 0 4px;
+
+    font-size: clamp(28px, 7.5vw, 40px);
+    line-height: 1.18;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
   }
+
+  .hero-section h1 span {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Hero Description */
 
   .hero-subtitle {
-    font-size: 13px;
+    max-width: 320px;
+    padding: 0 8px;
+    margin: 14px auto;
+
+    font-size: 12px;
+    line-height: 1.7;
   }
 
+  .hero-divider {
+    width: 65px;
+    margin: 18px auto;
+  }
+
+  /* Wedding Date */
+
   .hero-date {
-    font-size: 27px;
+    font-size: clamp(20px, 5.5vw, 25px);
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    margin: 10px 0;
   }
 
   .hero-location {
+    margin-top: 8px;
     font-size: 10px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+
+  /* RSVP Hero Button */
+
+  .primary-button {
+    display: inline-block;
+    margin: 20px auto 5px;
+    padding: 12px 30px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+
+    position: relative;
+    z-index: 2;
   }
 
   /* Welcome */
@@ -815,19 +991,28 @@ section {
   }
 
   .welcome-section h2 {
-    font-size: 32px;
+    font-size: 29px;
+    line-height: 1.25;
   }
 
-  /* Headings */
+  /* Section Headings */
 
   .section-heading {
     margin-bottom: 30px;
   }
 
   .section-heading h2 {
-    font-size: 37px;
+    font-size: clamp(29px, 8vw, 35px);
+    line-height: 1.2;
   }
+
+  .section-heading > p:not(.eyebrow) {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
   /* Celebrations */
+
   .celebrations-section {
     padding: 60px 17px;
   }
@@ -837,7 +1022,6 @@ section {
     gap: 22px;
   }
 
-  /* Mobile: show the complete image */
   .event-image {
     height: auto;
     min-height: 0;
@@ -850,22 +1034,19 @@ section {
     object-fit: contain;
   }
 
-  .event-details h3 {
-    font-size: 29px;
-  }
-
   .event-details {
     padding: 25px 18px 28px;
   }
 
-  .event-image.wedding-event-image {
-    height: auto;
-    min-height: 0;
-    max-height: none;
+  .event-details h3 {
+    font-size: 26px;
+    line-height: 1.25;
   }
 
-  .event-image.wedding-event-image img {
-    max-height: none;
+  .event-description,
+  .event-address {
+    font-size: 12px;
+    line-height: 1.8;
   }
 
   /* Accommodation */
@@ -885,6 +1066,15 @@ section {
     padding: 28px 18px;
   }
 
+  .hotel-card h3 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .hotel-address {
+    font-size: 13px;
+  }
+
   /* RSVP */
 
   .rsvp-section {
@@ -892,7 +1082,12 @@ section {
   }
 
   .rsvp-form {
-    padding: 25px 18px;
+    width: 100%;
+    padding: 22px 15px;
+  }
+
+  .form-group > label {
+    font-size: 12px;
   }
 
   .radio-group {
@@ -900,8 +1095,20 @@ section {
     gap: 14px;
   }
 
+  .radio-option,
+  .checkbox-option {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
   .checkbox-group {
     gap: 15px;
+  }
+
+  .form-group input:not([type="checkbox"]):not([type="radio"]),
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
   }
 
   /* Footer */
@@ -911,18 +1118,18 @@ section {
   }
 
   .footer-names {
-    font-size: 33px;
+    font-size: 29px;
   }
 }
 
 /* =========================================
-   SMALL MOBILE SCREENS
+   EXTRA SMALL MOBILE SCREENS
 ========================================= */
 
 @media (max-width: 380px) {
 
   .brand {
-    font-size: 24px;
+    font-size: 19px;
   }
 
   .main-nav {
@@ -930,24 +1137,52 @@ section {
   }
 
   .main-nav a {
-    font-size: 10px;
+    font-size: 9px;
+  }
+
+  .hero-section {
+    padding: 28px 9px 34px;
+  }
+
+  .hero-content {
+    padding: 8px 3px;
   }
 
   .hero-section h1 {
-    font-size: 46px;
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .hero-section .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1px;
   }
 
   .hero-date {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .section-heading h2 {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   .rsvp-form {
-    padding: 22px 14px;
+    padding: 20px 12px;
   }
+}
 
+/* =========================================
+   ACCESSIBILITY
+========================================= */
 
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
