@@ -1,7 +1,8 @@
 
-import { Component, ElementRef, ViewChild, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, Inject, PLATFORM_ID, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -16,39 +17,50 @@ export class App implements AfterViewInit {
     'https://script.google.com/macros/s/AKfycbwNu2QPgMEIrIqvQktEYwHk-3C-O4N9BhfghH-8mf_GMdplDfkHm9p38YG6gZk60qlT/exec';
 
   // Wedding background music
+  private musicStarted = false;
   @ViewChild('weddingMusic', { read: ElementRef })
   weddingMusic!: ElementRef<HTMLAudioElement>;
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
-
   ngAfterViewInit(): void {
-
-    // Run audio playback only in the browser
     if (!isPlatformBrowser(this.platformId)) {
       return;
     }
-
-    const audioElement = this.weddingMusic?.nativeElement;
-
-    if (!audioElement || typeof audioElement.play !== 'function') {
-      console.error('Wedding audio element is not available.');
+  
+    this.playWeddingMusic();
+  }
+  
+  private playWeddingMusic(): void {
+    if (!isPlatformBrowser(this.platformId) || this.musicStarted) {
       return;
     }
-
+  
+    const audioElement = this.weddingMusic?.nativeElement;
+  
+    if (!audioElement) {
+      return;
+    }
+  
     audioElement.volume = 0.30;
-
+  
     audioElement.play()
       .then(() => {
-        console.log('Wedding background music started ❤️');
+        this.musicStarted = true;
+        console.log('Wedding music started ❤️');
       })
       .catch((error: Error) => {
-        console.log(
-          'Browser blocked automatic music playback:',
-          error.message
-        );
+        console.log('Waiting for visitor interaction to start music:', error.message);
       });
+  }
+  
+  // Start music after the visitor clicks or taps anywhere
+  @HostListener('document:click')
+  startMusicAfterInteraction(): void {
+    if (!this.musicStarted) {
+      this.playWeddingMusic();
+    }
   }
 
   // RSVP form state
