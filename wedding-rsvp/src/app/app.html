@@ -9,6 +9,7 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#celebrations">Celebrations</a>
+        <a href="#our-story">Our Story</a>
         <a href="#accommodation">Accommodation</a>
         <a href="#rsvp">RSVP</a>
       </nav>
@@ -199,6 +200,92 @@
     </div>
   </section>
 
+
+<!-- Our Story -->
+<section class="our-story-section" id="our-story">
+
+  <div class="section-heading story-heading">
+    <p class="eyebrow">A little arranged, a little unexpected</p>
+    <h2>Our Story ❤️</h2>
+    <p>A little arranged, a little unexpected, and a whole lot of love!</p>
+  </div>
+
+  <div class="story-timeline">
+
+    <article class="story-item">
+      <div class="story-image">
+        <img src="/images/story-1.jpg" alt="Our first hello" loading="lazy">
+      </div>
+      <div class="story-content">
+        <p class="story-number">01 · THE BEGINNING</p>
+        <h3>💕 1. It Started With a Hello</h3>
+        <p>
+          Our families introduced us, and our first call lasted three hours!
+          The funny part? She hadn’t even seen his picture properly yet! 😂
+        </p>
+      </div>
+    </article>
+
+    <article class="story-item">
+      <div class="story-image">
+        <img src="/images/story-2.jpg" alt="Our unexpected first date" loading="lazy">
+      </div>
+      <div class="story-content">
+        <p class="story-number">02 · THE FIRST DATE</p>
+        <h3>🎳 2. The Unexpected First Date</h3>
+        <p>
+          No video calls, just a spontaneous meetup in San Antonio!
+          Bowling (she claims she let him win 😉), a beautiful River Walk,
+          and conversations that never seemed to end.
+        </p>
+      </div>
+    </article>
+
+    <article class="story-item">
+      <div class="story-image">
+        <img src="/images/story-3.jpg" alt="Our adventurous day together" loading="lazy">
+      </div>
+      <div class="story-content">
+        <p class="story-number">03 · AN UNFORGETTABLE ADVENTURE</p>
+        <h3>🚗 3. Lost Together, Found Each Other</h3>
+        <p>
+          We lost our car, asked ChatGPT for directions, and spent hours
+          driving in circles! What seemed like the worst first date became
+          our favorite memory. If we could survive that chaos together,
+          why not a lifetime? ❤️
+        </p>
+      </div>
+    </article>
+
+    <article class="story-item">
+      <div class="story-image">
+        <img src="/images/story-4.jpg" alt="Our surprise proposal" loading="lazy">
+      </div>
+      <div class="story-content">
+        <p class="story-number">04 · THE YES</p>
+        <h3>💍 4. The Surprise Proposal</h3>
+        <p>
+          After countless conversations, he surprised her with a ring at
+          the Dallas airport and popped the question. This time, there was
+          no confusion, just one beautiful answer: YES! ❤️
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="story-ending">
+    <h3>✨ And So, Forever Begins…</h3>
+    <p>
+      What started as a match arranged by our families turned into a
+      beautiful adventure we’re excited to continue together!
+    </p>
+    <p class="story-tap">Tap through our little love story! ❤️</p>
+  </div>
+
+</section>
+
+
   <!-- Accommodation -->
   <section class="accommodation-section" id="accommodation">
 
@@ -269,6 +356,26 @@
           Explore Nearby Hotels ↗
         </a>
       </article>
+
+
+<article class="hotel-card">
+  <img class="hotel-icon" src="/images/AllenQuality.png" alt="Quality Inn Allen - Plano East">
+
+  <h3>Quality Inn Allen - Plano East</h3>
+
+  <p class="hotel-address">
+    407 S Central Expy,<br />
+    Allen, TX 75013
+  </p>
+
+  <a
+    href="https://www.google.com/maps/search/?api=1&query=407+S+Central+Expy%2C+Allen%2C+TX+75013"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Explore Nearby Hotels ↗
+  </a>
+</article>
 
     </div>
 
@@ -405,6 +512,15 @@
                 [(ngModel)]="form.haldi"
               />
               <span>Haldi – February 19</span>
+            </label>
+
+            <label class="checkbox-option">
+              <input
+                type="checkbox"
+                name="pellikoduku"
+                [(ngModel)]="form.pellikoduku"
+              />
+              <span>Pellikoduku & Pellikuthuru – February 19</span>
             </label>
 
             <label class="checkbox-option">

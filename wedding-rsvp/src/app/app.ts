@@ -28,6 +28,7 @@ export class App {
       haldi: false,
       sangeeth: false,
       wedding: true,
+      pellikoduku: false,
       message: ''
     };
   }
